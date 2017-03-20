@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--
+	使用angular的时候需要指定angular的作用范围
+-->
+<html lang="en" ng-app>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../angular.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			.sty1{
+				background: yellow;
+			}
+			.sty2{
+				background: red;
+			}
+			div{
+				width: 100px;
+				height: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<div ng-show="true">123456</div>
+		<div ng-show="false">123456</div>//标签存在，样式隐藏
+		
+		<div ng-if="true">123456</div>
+		<div ng-if="false">123456</div>//标签不存在
+		
+		
+	</body>
+</html>

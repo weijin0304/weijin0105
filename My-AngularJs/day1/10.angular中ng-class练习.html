@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!--
+	使用angular的时候需要指定angular的作用范围
+-->
+<html lang="en" ng-app>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../angular.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			.sty1{
+				background: yellow;
+			}
+			.sty2{
+				background: red;
+			}
+			div{
+				width: 100px;
+				height: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<div ng-init="flag=true;" ng-class="{true:'sty1',false:'sty2'}[flag]"></div>
+		
+		<button ng-click="flag=!flag">切换</button>
+	</body>
+</html>

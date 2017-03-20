@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--
+	使用angular的时候需要指定angular的作用范围
+-->
+<html lang="en" ng-app>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../angular.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="bootstrap.css"/>
+	</head>
+	<body>
+		<br />
+		<br />
+		请输入过滤条件：<input type="text" ng-model="query" name="" id="" value="" />
+		<br />
+		<br />
+		<table class="table table-bordered" ng-init="persons=[{name:'张三',age:20,score:80},{name:'李四',age:30,score:50},{name:'王武',age:50,score:40}];order='age'">
+			<tr>
+				<td>序号</td>
+				<td>姓名</td>
+				<td ng-click="flag=!flag;order='age'">年龄</td>
+				<td>分数</td>
+			</tr>
+			<tr ng-init="flag=true" ng-repeat="person in persons | orderBy:order:flag |filter:query track by $index">
+				<td>{{$index+1}}</td>
+				<td>{{person.name}}</td>
+				<td>{{person.age}}</td>
+				<td>{{person.score}}</td>
+			</tr>
+		</table>
+		
+		
+		
+		
+	</body>
+</html>

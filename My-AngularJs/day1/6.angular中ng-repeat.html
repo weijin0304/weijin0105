@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!--
+	使用angular的时候需要指定angular的作用范围
+-->
+<html lang="en" ng-app>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../angular.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<!--遍历数组-->
+		<!--$index:下标-->
+		<ul ng-init="arys=[111,222,333,444,555]">
+			<li ng-repeat="item in arys">{{$index+ '.'+ item}}</li>
+		</ul>
+		<!--track by防止数组中出现重复的元素-->
+		<ul ng-init="ary=[111,222,333,444,555,444]">
+			<li ng-repeat="(index,item) in ary track by $index">{{index+ ':'+ item}}</li>
+		</ul>
+		
+		<!--遍历对象-->
+		<ul ng-init="obj={name:'weijin',age:20}">
+			<li ng-repeat="item in obj">{{$index+ ':'+item}}</li>
+		</ul>
+		<ul ng-init="obj={name:'weijin',age:20}">
+			<li ng-repeat="(attr,value) in obj">{{$index+ ':' + attr + value}}</li>
+		</ul>
+		
+		
+	</body>
+</html>

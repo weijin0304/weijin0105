@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<!--
+	使用angular的时候需要指定angular的作用范围
+-->
+<html lang="en" ng-app>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../angular.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		
+		<input type="number" ng-model="p" />
+		<input type="number" ng-model="num"/>
+		<p>{{(num&&p)?num*p:""}}</p>
+		
+		
+		
+		<script type="text/javascript">
+			
+		</script>
+		
+	</body>
+</html>

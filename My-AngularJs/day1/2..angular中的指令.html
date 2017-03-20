@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!--
+	使用angular的时候需要指定angular的作用范围
+-->
+<html lang="en" ng-app>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../angular.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<!--ng-init指令用来初始化变量-->
+		<div ng-init="name='weijin'">{{name}}</div>
+		
+		<div ng-init="ary=['1111','2222','333']">{{ary[2]}}</div>
+		
+		<div ng-init="obj={name:'weijin',age:20}">{{obj.name}}</div>
+		
+		<div ng-init="name='111'">{{name=='111'?222:333}}</div>
+		
+		<script type="text/javascript">
+			
+		</script>
+	</body>
+</html>

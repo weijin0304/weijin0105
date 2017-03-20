@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!--
+	使用angular的时候需要指定angular的作用范围
+-->
+<html lang="en" ng-app>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../angular.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<!--遍历数组-->
+		<!--$index:下标-->
+		
+		<ul ng-init="phones=[{name:'苹果',age:7},{name:'华为',age:8},{name:'小米',age:9}]">
+			<li ng-repeat="item in phones track by $index">
+				<span ng-repeat="(attr,value) in item">{{attr + ":"+ value}}</span>
+				<!--<span>item</span>-->
+			</li>
+		</ul>
+		
+		
+		
+	</body>
+</html>

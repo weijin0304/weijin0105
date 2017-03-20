@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!--
+	使用angular的时候需要指定angular的作用范围
+-->
+<html lang="en" ng-app>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../angular.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<!--遍历数组-->
+		<!--$index:下标-->
+		
+		<ul ng-init="ary=[111,222,333,444,555,444]">
+			<li ng-repeat="(index,item) in ary track by $index">
+				<span>{{ary[index]}}</span>
+				<span>{{item}}</span>
+				
+				<span>{{$first}}</span>
+				<span>{{$last}}</span>
+				
+				<span>{{$even}}</span>
+				<span>{{$odd}}</span>
+			</li>
+		</ul>
+		
+		
+		
+		
+	</body>
+</html>

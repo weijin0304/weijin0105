@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!--
+	使用angular的时候需要指定angular的作用范围
+-->
+<html lang="en" ng-app>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="bootstrap.css"/>
+		<script src="../angular.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			
+		</style>
+	</head>
+	<body>
+		<ul class="nav nav-tabs " ng-init="flag='home'">
+			<li role="presentation"  ng-class="{'active':flag=='home'}" ng-click="flag='home'"><a href="#">home</a></li>
+			<li role="presentation" ng-class="{'active':flag=='pro'}" ng-click="flag='pro'"><a href="#">pro</a></li>
+			<li role="presentation" ng-class="{'active':flag=='mess'}" ng-click="flag='mess'"><a href="#">mess</a></li>
+		</ul>
+		
+		
+		
+	</body>
+</html>
